@@ -44,7 +44,7 @@ def get_args_parser():
     parser.add_argument('--number_of_workers', default=20, type=int)
     parser.add_argument('--eval_per_epochs', default=1, type=int)
     parser.add_argument('--device', default='cuda', type=str)
-    parser.add_argument('--ssl_address', default='/vol/research/facer2vm_occ/people/soroush1/soroush1/DeepLearning/Wide_Resnet_self_supervised_V2/MAX_AUC_3_LOSS_FineTune_Wide_Resnet__28_09_2021_13_08_35_checkpoint.pth', type=str)
+    parser.add_argument('--ssl_address', default='', type=str)
    
     return parser
     
