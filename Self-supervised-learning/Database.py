@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb 23 16:42:36 2021
+#DEEP ANOMALY DETECTION by SF12
 
-@author: sf00511
-"""
 import torchvision.transforms as transforms
 import torchvision
 import torch
