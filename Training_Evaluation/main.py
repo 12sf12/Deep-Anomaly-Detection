@@ -6,7 +6,7 @@ import torch.optim as optim
 import argparse
 from Database import modify_DB_for_class
 from Execution import train_epoch, evaluate, evaluate_means
-from datetime import datetime
+import datetime
 
 from wideresnet import WideResNet
 from Triplet_center_loss import AMTCL
