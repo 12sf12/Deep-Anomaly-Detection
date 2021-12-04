@@ -1,3 +1,5 @@
+#DEEP ANOMALY DETECTION by SF12
+
 import imageio
 import numpy as np
 import os
