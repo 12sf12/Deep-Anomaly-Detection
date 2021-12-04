@@ -13,7 +13,6 @@ def GET_SSL_DB(BATCH_SIZE_VAL,NUMBER_OF_WORKERS):
     
     transform_images = transforms.Compose(
     [transforms.Resize([32,32]),
-    #transforms.Resize([256,256]),
     transforms.CenterCrop([32,32]),
     transforms.ToTensor(),
     transforms.Normalize(IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD)
