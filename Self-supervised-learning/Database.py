@@ -5,37 +5,7 @@ import torchvision
 import torch
 import numpy as np
 from torch.utils.data import Subset 
-#from sklearn.metrics import multilabel_confusion_matrix
-#from vision_transformer_pytorch import VisionTransformer
-from random import seed
-from random import random, randint
-import kornia
-from kornia.constants import Resample
-from kornia.color import *
-from kornia import augmentation as K
-import kornia.augmentation.random_generator as rg
 from torchvision.transforms import functional as tvF
-from torchvision.transforms import transforms
-import torch.nn as nn
-from torchvision import datasets, models, transforms, utils
-from vit_pytorch import *
-import time
-import os
-import pandas as pd
-from timm.data.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
-#from skimage import io
-from torch.utils.data import Dataset, DataLoader
-from PIL import Image
-import copy
-import csv
-import argparse
-from datetime import datetime
-import matplotlib
-from torchvision.models.resnet import ResNet, BasicBlock, Bottleneck
-from torchvision import datasets, models, transforms, utils
-import torch.nn as nn
-import torch.optim as optim
-from TinyImageNet import TinyImageNetDataset
 from numpy.random import randint
 
 
