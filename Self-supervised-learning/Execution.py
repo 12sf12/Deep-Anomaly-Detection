@@ -41,15 +41,19 @@ def train_epoch(model, epoch, optimizer, optimizer_center, criterion_center, T, 
     total_term2=0.0
     
     
-    w_cross=1
+    
     if epoch<5:
         w_center=0.02
+        w_cross=0.98
     elif epoch>=5 and epoch<15:
         w_center=0.05
+        w_cross=0.95
     elif epoch>=15 and epoch<30:
         w_center=0.08
+        w_cross=0.92
     else:
         w_center=0.1
+        w_cross=0.9
     
     print("*********************")
     for times in range(GT_classes):
