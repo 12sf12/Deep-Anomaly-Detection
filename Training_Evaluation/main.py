@@ -6,6 +6,7 @@ import torch.optim as optim
 import argparse
 from Database import modify_DB_for_class
 from Execution import train_epoch, evaluate, evaluate_means
+from datetime import datetime as dt
 import datetime
 
 from wideresnet import WideResNet
@@ -50,7 +51,7 @@ def get_args_parser():
     
 
 def main(args):
-    now = datetime.now()
+    now = dt.now()
     current_time = now.strftime("%d/%m/%Y\n%H:%M:%S") 
     print('Current Date and Time:')
     print(current_time)
