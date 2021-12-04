@@ -7,6 +7,7 @@ import numpy as np
 from torch.utils.data import Subset 
 from torchvision.transforms import functional as tvF
 from numpy.random import randint
+from TinyImageNet import TinyImageNetDataset
 
 
 def GET_SSL_DB(BATCH_SIZE_VAL,NUMBER_OF_WORKERS):
