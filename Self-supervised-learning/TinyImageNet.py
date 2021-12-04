@@ -30,6 +30,7 @@ def _add_channels(img, total_channels=3):
 class TinyImageNetPaths:
   def __init__(self, root_dir):
     if not os.path.exists(os.getcwd()+'/TinyImageNet/'):
+      print('TinyImagenet downloading has been started...')
       download_and_unzip('http://cs231n.stanford.edu/tiny-imagenet-200.zip',
                          root_dir)
 
