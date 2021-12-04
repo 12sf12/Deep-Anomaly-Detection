@@ -9,7 +9,10 @@ from Database import GET_SSL_DB
 from Execution import train_epoch
 from pathlib import Path
 import numpy as np
-from datetime import datetime
+
+from datetime import datetime as dt
+import datetime
+
 import torch.nn as nn
 import copy
 
@@ -51,7 +54,7 @@ def get_args_parser():
 
 
 def main(args):
-    now = datetime.now()
+    now = dt.now()
     current_time = now.strftime("%d/%m/%Y\n%H:%M:%S") 
     print('Current Date and Time:')
     print(current_time)
