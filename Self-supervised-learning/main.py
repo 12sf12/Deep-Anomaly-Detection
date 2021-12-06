@@ -117,6 +117,5 @@ if __name__ == '__main__':
     print('Started')
     parser = argparse.ArgumentParser('Deep Anomaly Detection--- Stage 1--- Self-Supervision', parents=[get_args_parser()])
     args = parser.parse_args()
-    if not os.path.exists(os.getcwd()+'/results'):
-        Path(os.getcwd()+'/results').mkdir(parents=True, exist_ok=True)
+
     main(args)
