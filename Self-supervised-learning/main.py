@@ -92,7 +92,7 @@ def main(args):
             min_loss_epochs=epoch
             print('Epoch Number of Min Loss up to now is:', min_loss_epochs)
             print('Min Loss is:',min_loss)
-            checkpoint_path = args.output_dir+'self_supervised_learning'+str(epoch)+current_time+'_checkpoint.pth'
+            checkpoint_path = os.getcwd()+'/self_supervised_learning'+str(epoch)+current_time+'_checkpoint.pth'
             torch.save({
                 'model': model.state_dict(),
                 'optimizer': optimizer.state_dict(),
