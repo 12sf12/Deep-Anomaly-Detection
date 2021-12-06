@@ -63,7 +63,8 @@ def main(args):
     print(args)
     start_time = time.time()    
     trainloader,testloader=GET_SSL_DB(args.batch_size_train,args.number_of_workers)
-
+    print()
+    print('Dataset has been loaded')
     
 
     model = WideResNet(args.depth,args.GT_classes,args.widen_factor,args.dropout)
