@@ -56,6 +56,7 @@ def get_args_parser():
 def main(args):
     now = dt.now()
     current_time = now.strftime("%d/%m/%Y\n%H:%M:%S") 
+    checkpoint_time = now.strftime("_%d_%m_%Y_%H_%M_%S") 
     print('Current Date and Time:')
     print(current_time)
     
@@ -81,6 +82,7 @@ def main(args):
     for epoch in range(1, args.epochs+1):
         print()
         print('Epoch:', epoch)
+        start_of_epoch = time.time()
         
         train_loss=train_epoch(model,epoch, optimizer, optimizer_centloss, criterion_center_loss, args.temprature, trainloader, args.GT_classes, args.device)
         
@@ -92,7 +94,7 @@ def main(args):
             min_loss_epochs=epoch
             print('Epoch Number of Min Loss up to now is:', min_loss_epochs)
             print('Min Loss is:',min_loss)
-            checkpoint_path = os.getcwd()+'/self_supervised_learning'+str(epoch)+current_time+'_checkpoint.pth'
+            checkpoint_path = os.getcwd()+'/self_supervised_learning'+str(epoch)+checkpoint_time+'_checkpoint.pth'
             torch.save({
                 'model': model.state_dict(),
                 'optimizer': optimizer.state_dict(),
@@ -105,7 +107,7 @@ def main(args):
         
         train_loss_history.append(train_loss)
         print('Train Loss: ',train_loss)
-                        
+        print('Epoch time:', datetime.timedelta(seconds=time.time() - start_of_epoch), '(hrs/mins/secs)')              
          
      
 
