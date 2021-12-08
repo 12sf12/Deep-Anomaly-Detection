@@ -68,7 +68,7 @@ def main(args):
     
 
     model = WideResNet(args.depth,args.GT_classes,args.widen_factor,args.dropout)
-        
+    model = model.to(args.device)   
     
     
     optimizer = optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay_SCE)
