@@ -68,9 +68,9 @@ def train_epoch(model, epoch, optimizer, optimizer_center, criterion_center, T, 
             reach_id+=1
                        
             with torch.set_grad_enabled(True):
-                features, logits = model(another_cpu_data)
-                term1 = F.cross_entropy(logits/T, another_cpu_target)
-                term2 = criterion_center(features.cuda(), another_cpu_target.to(device),epoch)
+                features, logits = model(another_cpu_data.to(device))
+                term1 = F.cross_entropy(logits/T, another_cpu_target.to(device))
+                term2 = criterion_center(features.to(device), another_cpu_target.to(device),epoch)
 
                 
                         
